@@ -15,7 +15,7 @@ var ShowsList = React.createClass({
 
     return (
       <div>
-        <h2>ShowsList</h2>
+        <h2>Shows</h2>
         <ul>
           { showsElements }
         </ul>

@@ -5,7 +5,7 @@ var Shows = require('./components/Shows');
 
 var content = (
   <div>
-    <h1>Shows App</h1>
+    <h1>Shows & Bears App</h1>
     <Shows></Shows>
   </div>
 );

@@ -57,7 +57,7 @@
 	  React.createElement(
 	    'h1',
 	    null,
-	    'Shows App'
+	    'Shows & Bears App'
 	  ),
 	  React.createElement(Shows, null)
 	);
@@ -19782,11 +19782,6 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h2',
-	        null,
-	        'Shows'
-	      ),
 	      React.createElement(ShowsList, { showsData: showsData }),
 	      React.createElement(MainBearButton, null),
 	      React.createElement(ViewMoreBearsButton, null),
@@ -19840,7 +19835,7 @@
 	      React.createElement(
 	        'h2',
 	        null,
-	        'ShowsList'
+	        'Shows'
 	      ),
 	      React.createElement(
 	        'ul',

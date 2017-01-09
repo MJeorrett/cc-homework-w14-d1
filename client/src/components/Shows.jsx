@@ -11,7 +11,6 @@ var Shows = React.createClass({
   render: function() {
     return (
       <div>
-        <h2>Shows</h2>
         <ShowsList showsData={ showsData }/>
         <MainBearButton />
         <ViewMoreBearsButton /><br />
