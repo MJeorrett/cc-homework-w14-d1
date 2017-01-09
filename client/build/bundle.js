@@ -19768,21 +19768,52 @@
 	
 	var React = __webpack_require__(1);
 	
+	var ShowsList = __webpack_require__(160);
+	
 	var Shows = React.createClass({
 	  displayName: 'Shows',
 	
 	
 	  render: function render() {
 	    return React.createElement(
-	      'h2',
+	      'div',
 	      null,
-	      'Shows'
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Shows'
+	      ),
+	      React.createElement(ShowsList, null)
 	    );
 	  }
 	
 	});
 	
 	module.exports = Shows;
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var ShowsList = React.createClass({
+	  displayName: 'ShowsList',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'h2',
+	      null,
+	      'ShowsList'
+	    );
+	  }
+	
+	});
+	
+	module.exports = ShowsList;
 
 /***/ }
 /******/ ]);
