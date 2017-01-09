@@ -1,6 +1,6 @@
 var React = require('react');
 
-var GetShowTimesButton = React.createClass({
+var MainBearButton = React.createClass({
 
   getInitialState: function() {
     return { showBear: false };
@@ -25,4 +25,4 @@ var GetShowTimesButton = React.createClass({
 
 });
 
-module.exports = GetShowTimesButton;
+module.exports = MainBearButton;

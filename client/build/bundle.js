@@ -19770,7 +19770,7 @@
 	
 	var ShowsList = __webpack_require__(160);
 	var MoreShowsLink = __webpack_require__(161);
-	var GetShowTimesButton = __webpack_require__(162);
+	var MainBearButton = __webpack_require__(163);
 	
 	var Shows = React.createClass({
 	  displayName: 'Shows',
@@ -19788,7 +19788,7 @@
 	      React.createElement(ShowsList, null),
 	      React.createElement(MoreShowsLink, null),
 	      React.createElement('br', null),
-	      React.createElement(GetShowTimesButton, null)
+	      React.createElement(MainBearButton, null)
 	    );
 	  }
 	
@@ -19845,15 +19845,16 @@
 	module.exports = MoreShowsLink;
 
 /***/ },
-/* 162 */
+/* 162 */,
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	var React = __webpack_require__(1);
 	
-	var GetShowTimesButton = React.createClass({
-	  displayName: "GetShowTimesButton",
+	var MainBearButton = React.createClass({
+	  displayName: "MainBearButton",
 	
 	
 	  getInitialState: function getInitialState() {
@@ -19882,7 +19883,7 @@
 	
 	});
 	
-	module.exports = GetShowTimesButton;
+	module.exports = MainBearButton;
 
 /***/ }
 /******/ ]);
