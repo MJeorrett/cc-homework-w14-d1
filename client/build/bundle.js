@@ -19858,12 +19858,17 @@
 	
 	
 	  getInitialState: function getInitialState() {
-	    return { showBear: false };
+	    return {
+	      showBear: false,
+	      showHideCount: 0
+	    };
 	  },
 	
 	  handleGetShowTimesClicked: function handleGetShowTimesClicked(e) {
+	    var showHideCountIncrement = this.state.showBear ? 0 : 1;
 	    this.setState({
-	      showBear: !this.state.showBear
+	      showBear: !this.state.showBear,
+	      showHideCount: this.state.showHideCount + showHideCountIncrement
 	    });
 	  },
 	
@@ -19877,7 +19882,7 @@
 	        this.state.showBear ? "Hide Main Bear" : "Show Main Bear"
 	      ),
 	      React.createElement("br", null),
-	      React.createElement("img", { src: "bear.png", style: { display: this.state.showBear ? 'inline-block' : 'none' } })
+	      React.createElement("img", { id: "bear-image", className: this.state.showHideCount % 2 === 1 ? "" : "flipped-img", src: "bear.png", style: { display: this.state.showBear ? "inline-block" : "none" } })
 	    );
 	  }
 	

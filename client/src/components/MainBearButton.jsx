@@ -3,12 +3,17 @@ var React = require('react');
 var MainBearButton = React.createClass({
 
   getInitialState: function() {
-    return { showBear: false };
+    return {
+      showBear: false,
+      showHideCount: 0
+    };
   },
 
   handleGetShowTimesClicked: function( e ) {
+    var showHideCountIncrement = this.state.showBear ? 0 : 1;
     this.setState({
-      showBear: !this.state.showBear
+      showBear: !this.state.showBear,
+      showHideCount: this.state.showHideCount + showHideCountIncrement
     });
   },
 
@@ -18,7 +23,7 @@ var MainBearButton = React.createClass({
         <button onClick={ this.handleGetShowTimesClicked }>
           { this.state.showBear ? "Hide Main Bear" : "Show Main Bear" }
         </button><br />
-        <img src="bear.png" style={{ display: this.state.showBear ? 'inline-block' : 'none'}}/>
+      <img id="bear-image" className={ this.state.showHideCount % 2 === 1 ? "" : "flipped-img" } src="bear.png" style={{ display: this.state.showBear ? "inline-block" : "none"}}/>
       </div>
     );
   }
