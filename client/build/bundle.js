@@ -19769,6 +19769,7 @@
 	var React = __webpack_require__(1);
 	
 	var ShowsList = __webpack_require__(160);
+	var MoreShowsLink = __webpack_require__(161);
 	
 	var Shows = React.createClass({
 	  displayName: 'Shows',
@@ -19783,7 +19784,8 @@
 	        null,
 	        'Shows'
 	      ),
-	      React.createElement(ShowsList, null)
+	      React.createElement(ShowsList, null),
+	      React.createElement(MoreShowsLink, null)
 	    );
 	  }
 	
@@ -19814,6 +19816,30 @@
 	});
 	
 	module.exports = ShowsList;
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var MoreShowsLink = React.createClass({
+	  displayName: 'MoreShowsLink',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'a',
+	      null,
+	      'View More Shows'
+	    );
+	  }
+	
+	});
+	
+	module.exports = MoreShowsLink;
 
 /***/ }
 /******/ ]);
