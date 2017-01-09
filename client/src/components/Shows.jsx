@@ -2,6 +2,7 @@ var React = require('react');
 
 var ShowsList = require('./ShowsList');
 var MoreShowsLink = require('./MoreShowsLink');
+var GetShowTimesButton = require('./GetShowTimesButton');
 
 var Shows = React.createClass({
 
@@ -10,7 +11,8 @@ var Shows = React.createClass({
       <div>
         <h2>Shows</h2>
         <ShowsList />
-        <MoreShowsLink />
+        <MoreShowsLink /><br />
+        <GetShowTimesButton />
       </div>
     );
   }

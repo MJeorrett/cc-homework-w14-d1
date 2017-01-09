@@ -19770,6 +19770,7 @@
 	
 	var ShowsList = __webpack_require__(160);
 	var MoreShowsLink = __webpack_require__(161);
+	var GetShowTimesButton = __webpack_require__(162);
 	
 	var Shows = React.createClass({
 	  displayName: 'Shows',
@@ -19785,7 +19786,9 @@
 	        'Shows'
 	      ),
 	      React.createElement(ShowsList, null),
-	      React.createElement(MoreShowsLink, null)
+	      React.createElement(MoreShowsLink, null),
+	      React.createElement('br', null),
+	      React.createElement(GetShowTimesButton, null)
 	    );
 	  }
 	
@@ -19840,6 +19843,30 @@
 	});
 	
 	module.exports = MoreShowsLink;
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var GetShowTimesButton = React.createClass({
+	  displayName: 'GetShowTimesButton',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'button',
+	      null,
+	      'Get Show Times'
+	    );
+	  }
+	
+	});
+	
+	module.exports = GetShowTimesButton;
 
 /***/ }
 /******/ ]);
