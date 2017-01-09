@@ -33,9 +33,10 @@ var ViewMoreBearsButton = React.createClass({
 
     var bears = [];
     for ( var i = 0; i < this.state.bearCount; i++ ) {
+      var flipClass = Math.random() > 0.5 ? ' flipped-img' : '';
       bears.push(
         <img
-          className="small-bear"
+          className={ "small-bear" + flipClass }
           key={ i.toString() }
           src="bear.png"
         ></img>

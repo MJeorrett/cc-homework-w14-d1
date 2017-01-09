@@ -19801,32 +19801,16 @@
 	
 	var React = __webpack_require__(1);
 	
+	var Show = __webpack_require__(164);
+	
 	var ShowsList = React.createClass({
 	  displayName: 'ShowsList',
 	
 	
 	  render: function render() {
 	
-	    var showsElements = this.props.showsData.map(function (showData) {
-	      return React.createElement(
-	        'li',
-	        { key: showData.id },
-	        React.createElement(
-	          'a',
-	          { href: showData.url },
-	          showData.name
-	        ),
-	        React.createElement(
-	          'span',
-	          null,
-	          ' >> '
-	        ),
-	        React.createElement(
-	          'a',
-	          { href: showData.showTimesURL },
-	          'times'
-	        )
-	      );
+	    var showElements = this.props.showsData.map(function (showData) {
+	      return React.createElement(Show, { key: showData.id, showData: showData });
 	    });
 	
 	    return React.createElement(
@@ -19840,7 +19824,7 @@
 	      React.createElement(
 	        'ul',
 	        null,
-	        showsElements
+	        showElements
 	      )
 	    );
 	  }
@@ -19853,12 +19837,12 @@
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var React = __webpack_require__(1);
 	
 	var ViewMoreBearsButton = React.createClass({
-	  displayName: "ViewMoreBearsButton",
+	  displayName: 'ViewMoreBearsButton',
 	
 	
 	  getInitialState: function getInitialState() {
@@ -19889,24 +19873,25 @@
 	
 	    var bears = [];
 	    for (var i = 0; i < this.state.bearCount; i++) {
-	      bears.push(React.createElement("img", {
-	        className: "small-bear",
+	      var flipClass = Math.random() > 0.5 ? ' flipped-img' : '';
+	      bears.push(React.createElement('img', {
+	        className: "small-bear" + flipClass,
 	        key: i.toString(),
-	        src: "bear.png"
+	        src: 'bear.png'
 	      }));
 	    }
 	
 	    return React.createElement(
-	      "div",
+	      'div',
 	      null,
 	      React.createElement(
-	        "button",
+	        'button',
 	        { onClick: this.handleButtonClicked },
 	        this.state.breadingInProgress ? "Stop Breading" : "View More Bears"
 	      ),
 	      React.createElement(
-	        "div",
-	        { id: "small-bears-container" },
+	        'div',
+	        { id: 'small-bears-container' },
 	        bears
 	      )
 	    );
@@ -19986,6 +19971,45 @@
 	}];
 	
 	module.exports = shows;
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var Show = React.createClass({
+	  displayName: 'Show',
+	
+	
+	  render: function render() {
+	    var showData = this.props.showData;
+	    return React.createElement(
+	      'li',
+	      { key: this.props.key },
+	      React.createElement(
+	        'a',
+	        { href: showData.url },
+	        showData.name
+	      ),
+	      React.createElement(
+	        'span',
+	        null,
+	        ' >> '
+	      ),
+	      React.createElement(
+	        'a',
+	        { href: showData.showTimesURL },
+	        'times'
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = Show;
 
 /***/ }
 /******/ ]);

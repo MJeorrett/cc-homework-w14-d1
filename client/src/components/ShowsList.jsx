@@ -1,15 +1,14 @@
 var React = require('react');
 
+var Show = require('./Show');
+
 var ShowsList = React.createClass({
 
   render: function() {
 
-    var showsElements = this.props.showsData.map( function( showData ) {
+    var showElements = this.props.showsData.map( function( showData ) {
       return (
-        <li key={ showData.id }>
-          <a href={ showData.url }>{ showData.name }</a><span> >> </span>
-          <a href={ showData.showTimesURL }>times</a>
-        </li>
+        <Show key={ showData.id } showData={ showData } />
       )
     });
 
@@ -17,7 +16,7 @@ var ShowsList = React.createClass({
       <div>
         <h2>Shows</h2>
         <ul>
-          { showsElements }
+          { showElements }
         </ul>
       </div>
     );
