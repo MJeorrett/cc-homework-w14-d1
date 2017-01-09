@@ -11,8 +11,8 @@ var Shows = React.createClass({
       <div>
         <h2>Shows</h2>
         <ShowsList />
-        <ViewMoreBearsButton /><br />
         <MainBearButton />
+        <ViewMoreBearsButton /><br />
       </div>
     );
   }

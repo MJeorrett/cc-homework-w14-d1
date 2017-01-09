@@ -19786,9 +19786,9 @@
 	        'Shows'
 	      ),
 	      React.createElement(ShowsList, null),
+	      React.createElement(MainBearButton, null),
 	      React.createElement(ViewMoreBearsButton, null),
-	      React.createElement('br', null),
-	      React.createElement(MainBearButton, null)
+	      React.createElement('br', null)
 	    );
 	  }
 	

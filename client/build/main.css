@@ -25,6 +25,10 @@ button:hover {
 }
 
 #bear-image {
+  width: 310px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
   margin: 15px;
 }
 
