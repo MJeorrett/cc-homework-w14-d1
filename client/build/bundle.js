@@ -19848,19 +19848,35 @@
 /* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(1);
 	
 	var GetShowTimesButton = React.createClass({
-	  displayName: 'GetShowTimesButton',
+	  displayName: "GetShowTimesButton",
 	
+	
+	  getInitialState: function getInitialState() {
+	    return { showBear: false };
+	  },
+	
+	  handleGetShowTimesClicked: function handleGetShowTimesClicked(e) {
+	    this.setState({
+	      showBear: !this.state.showBear
+	    });
+	  },
 	
 	  render: function render() {
 	    return React.createElement(
-	      'button',
+	      "div",
 	      null,
-	      'Get Show Times'
+	      React.createElement(
+	        "button",
+	        { onClick: this.handleGetShowTimesClicked },
+	        this.state.showBear ? "Hide Main Bear" : "Show Main Bear"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement("img", { src: "bear.png", style: { display: this.state.showBear ? 'inline-block' : 'none' } })
 	    );
 	  }
 	
