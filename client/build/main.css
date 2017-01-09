@@ -33,11 +33,9 @@ button:hover {
   -ms-filter: "FlipH";
 }
 
-#bear-image {
-  width: 310px;
+#main-bear {
+  width: 250px;
   height: 250px;
-  object-fit: cover;
-  object-position: top;
   margin: 15px;
 }
 

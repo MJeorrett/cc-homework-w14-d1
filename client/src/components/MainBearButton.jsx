@@ -23,7 +23,7 @@ var MainBearButton = React.createClass({
         <button onClick={ this.handleGetShowTimesClicked }>
           { this.state.showBear ? "Hide Main Bear" : "Show Main Bear" }
         </button><br />
-      <img id="bear-image" className={ this.state.showHideCount % 2 === 1 ? "" : "flipped-img" } src="bear.png" style={{ display: this.state.showBear ? "inline-block" : "none"}}/>
+      <img id="main-bear" className={ this.state.showHideCount % 2 === 1 ? "" : "flipped-img" } src="mainBear.png" style={{ display: this.state.showBear ? "inline-block" : "none"}}/>
       </div>
     );
   }

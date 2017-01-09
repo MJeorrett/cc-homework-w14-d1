@@ -19861,10 +19861,10 @@
 	  },
 	
 	  startBearing: function startBearing() {
-	    this.setState({
-	      bearCount: this.state.bearCount + 1
-	    });
 	    if (this.state.breadingInProgress) {
+	      this.setState({
+	        bearCount: this.state.bearCount + 1
+	      });
 	      setTimeout(this.startBearing, 200);
 	    }
 	  },
@@ -19938,7 +19938,7 @@
 	        this.state.showBear ? "Hide Main Bear" : "Show Main Bear"
 	      ),
 	      React.createElement("br", null),
-	      React.createElement("img", { id: "bear-image", className: this.state.showHideCount % 2 === 1 ? "" : "flipped-img", src: "bear.png", style: { display: this.state.showBear ? "inline-block" : "none" } })
+	      React.createElement("img", { id: "main-bear", className: this.state.showHideCount % 2 === 1 ? "" : "flipped-img", src: "mainBear.png", style: { display: this.state.showBear ? "inline-block" : "none" } })
 	    );
 	  }
 	
