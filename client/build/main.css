@@ -7,6 +7,7 @@ button {
   font-size: 1em;
   background-color: white;
   border: 3px solid dodgerblue;
+  margin: 10px;
 }
 
 button:hover {
@@ -25,4 +26,14 @@ button:hover {
 
 #bear-image {
   margin: 15px;
+}
+
+.small-bear {
+  width: 35px;
+  height: 35px;
+  margin: 3px;
+}
+
+#small-bears-container {
+  min-height: 45px;
 }

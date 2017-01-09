@@ -19769,8 +19769,8 @@
 	var React = __webpack_require__(1);
 	
 	var ShowsList = __webpack_require__(160);
-	var MoreShowsLink = __webpack_require__(161);
-	var MainBearButton = __webpack_require__(163);
+	var ViewMoreBearsButton = __webpack_require__(161);
+	var MainBearButton = __webpack_require__(162);
 	
 	var Shows = React.createClass({
 	  displayName: 'Shows',
@@ -19786,7 +19786,7 @@
 	        'Shows'
 	      ),
 	      React.createElement(ShowsList, null),
-	      React.createElement(MoreShowsLink, null),
+	      React.createElement(ViewMoreBearsButton, null),
 	      React.createElement('br', null),
 	      React.createElement(MainBearButton, null)
 	    );
@@ -19824,29 +19824,71 @@
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(1);
 	
-	var MoreShowsLink = React.createClass({
-	  displayName: 'MoreShowsLink',
+	var ViewMoreBearsButton = React.createClass({
+	  displayName: "ViewMoreBearsButton",
 	
+	
+	  getInitialState: function getInitialState() {
+	    return {
+	      bearCount: 0,
+	      breadingInProgress: false
+	    };
+	  },
+	
+	  handleButtonClicked: function handleButtonClicked() {
+	    this.setState({
+	      breadingInProgress: !this.state.breadingInProgress
+	    }, function () {
+	      this.startBearing();
+	    });
+	  },
+	
+	  startBearing: function startBearing() {
+	    this.setState({
+	      bearCount: this.state.bearCount + 1
+	    });
+	    if (this.state.breadingInProgress) {
+	      setTimeout(this.startBearing, 200);
+	    }
+	  },
 	
 	  render: function render() {
+	
+	    var bears = [];
+	    for (var i = 0; i < this.state.bearCount; i++) {
+	      bears.push(React.createElement("img", {
+	        className: "small-bear",
+	        key: i.toString(),
+	        src: "bear.png"
+	      }));
+	    }
+	
 	    return React.createElement(
-	      'a',
+	      "div",
 	      null,
-	      'View More Shows'
+	      React.createElement(
+	        "button",
+	        { onClick: this.handleButtonClicked },
+	        this.state.breadingInProgress ? "Stop Breading" : "View More Bears"
+	      ),
+	      React.createElement(
+	        "div",
+	        { id: "small-bears-container" },
+	        bears
+	      )
 	    );
 	  }
 	
 	});
 	
-	module.exports = MoreShowsLink;
+	module.exports = ViewMoreBearsButton;
 
 /***/ },
-/* 162 */,
-/* 163 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
