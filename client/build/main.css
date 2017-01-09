@@ -2,6 +2,11 @@
   color: dodgerblue;
 }
 
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 button {
   border-radius: 5px;
   font-size: 1em;
