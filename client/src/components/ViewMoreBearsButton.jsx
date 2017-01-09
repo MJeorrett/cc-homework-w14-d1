@@ -21,10 +21,10 @@ var ViewMoreBearsButton = React.createClass({
   },
 
   startBearing: function() {
-    this.setState({
-      bearCount: this.state.bearCount + 1
-    });
     if ( this.state.breadingInProgress ) {
+      this.setState({
+        bearCount: this.state.bearCount + 1
+      });
       setTimeout( this.startBearing, 200 );
     }
   },
