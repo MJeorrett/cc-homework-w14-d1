@@ -49,12 +49,21 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 	
-	window.onload = function () {
-	  ReactDOM.render(React.createElement(
+	var Shows = __webpack_require__(159);
+	
+	var content = React.createElement(
+	  'div',
+	  null,
+	  React.createElement(
 	    'h1',
 	    null,
-	    ' App Started '
-	  ), document.getElementById('app'));
+	    'Shows App'
+	  ),
+	  React.createElement(Shows, null)
+	);
+	
+	window.onload = function () {
+	  ReactDOM.render(content, document.getElementById('app'));
 	};
 
 /***/ },
@@ -19750,6 +19759,30 @@
 	
 	module.exports = __webpack_require__(3);
 
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var Shows = React.createClass({
+	  displayName: 'Shows',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'h2',
+	      null,
+	      'Shows'
+	    );
+	  }
+	
+	});
+	
+	module.exports = Shows;
 
 /***/ }
 /******/ ]);

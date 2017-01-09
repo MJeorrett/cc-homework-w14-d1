@@ -1,9 +1,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var Shows = require('./components/Shows');
+
+var content = (
+  <div>
+    <h1>Shows App</h1>
+    <Shows></Shows>
+  </div>
+);
+
 window.onload = function(){
-  ReactDOM.render(
-    <h1> App Started </h1>,
-    document.getElementById('app')
-  );
+  ReactDOM.render( content, document.getElementById('app') );
 }
