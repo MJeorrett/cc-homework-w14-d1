@@ -19887,7 +19887,7 @@
 	      React.createElement(
 	        'button',
 	        { onClick: this.handleButtonClicked },
-	        this.state.breadingInProgress ? "Stop Breading" : "View More Bears"
+	        this.state.breadingInProgress ? "Stop Breeding" : "View More Bears"
 	      ),
 	      React.createElement(
 	        'div',

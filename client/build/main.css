@@ -1,5 +1,5 @@
 * {
-  color: dodgerblue;
+  color: brown;
 }
 
 a {
@@ -15,13 +15,17 @@ button {
   border-radius: 5px;
   font-size: 1em;
   background-color: white;
-  border: 3px solid dodgerblue;
+  border: 3px solid brown;
   margin: 10px;
 }
 
 button:hover {
-  background-color: lightblue;
+  background-color: chocolate;
   cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
 }
 
 .flipped-img {

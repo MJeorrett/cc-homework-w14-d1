@@ -46,7 +46,7 @@ var ViewMoreBearsButton = React.createClass({
     return (
       <div>
         <button onClick={ this.handleButtonClicked }>
-          { this.state.breadingInProgress ? "Stop Breading" : "View More Bears" }
+          { this.state.breadingInProgress ? "Stop Breeding" : "View More Bears" }
         </button>
         <div id="small-bears-container">
           { bears }
